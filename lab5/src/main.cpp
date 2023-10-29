@@ -1,39 +1,35 @@
 #include <iostream>
-#include <vector>
 #include <map>
+#include <vector>
 
 const char TERMINAL = '$';
 
 class SuffixNode {
-public:
+   public:
     int leftIndex, rightIndex;
-    SuffixNode *suffixLink;
+    SuffixNode* suffixLink;
     std::map<char, SuffixNode> children;
 };
 
 class SuffixTree {
-public:
-    SuffixTree(const std::string &text);
+   public:
+    SuffixTree(const std::string& text);
     ~SuffixTree();
 
-private:
-    void Build(const std::string &text);
-    void AddSuffix(const std::string &suffix);
-    bool Find(const std::string &pattern);
+   private:
+    void Build(const std::string& text);
+    void AddSuffix(const std::string& suffix);
+    bool Find(const std::string& pattern);
 
-private:
+   private:
     SuffixNode root;
     std::string text;
 };
 
-void SuffixTree::Build(const std::string &text) {
+void SuffixTree::Build(const std::string& text) {}
 
-}
+void SuffixTree::AddSuffix(const std::string& suffix) {}
 
-void SuffixTree::AddSuffix(const std::string &suffix) {
+void foo() {}
 
-}
-
-
-int main() {
-}
+int main() {}
