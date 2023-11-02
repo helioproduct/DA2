@@ -1,5 +1,6 @@
 #include <iostream>
 #include <map>
+#include <string>
 #include <vector>
 
 const char TERMINAL = '$';
@@ -13,23 +14,40 @@ class SuffixNode {
 
 class SuffixTree {
    public:
-    SuffixTree(const std::string& text);
+    SuffixTree(const std::string&);
     ~SuffixTree();
 
-   private:
-    void Build(const std::string& text);
-    void AddSuffix(const std::string& suffix);
-    bool Find(const std::string& pattern);
+   public:
+    void Build(const std::string&);
+    void AddSuffix(const std::string&);
+    bool Find(const std::string&);
+    void PrintText();
 
    private:
     SuffixNode root;
     std::string text;
+    size_t END;
 };
 
-void SuffixTree::Build(const std::string& text) {}
+SuffixTree::SuffixTree(const std::string& source_string) {
+    text = source_string;
+}
+
+void SuffixTree::PrintText() { std::cout << text << std::endl; }
+
+SuffixTree::~SuffixTree() {}
+
+void SuffixTree::Build(const std::string& source_string) {
+    text = source_string;
+}
 
 void SuffixTree::AddSuffix(const std::string& suffix) {}
 
 void foo() {}
 
-int main() {}
+int main() {
+    std::string s = "hello";
+    SuffixTree tree = SuffixTree(s);
+    tree.PrintText();
+    return 0;
+}
