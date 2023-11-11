@@ -129,6 +129,9 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);
 
+    chrono::time_point<chrono::system_clock> start, end;
+    start = chrono::system_clock::now();
+
     string text;
     cin >> text;
     build_string = text + "{";
@@ -137,22 +140,27 @@ int main() {
         suffix_tree_root.Insert((int)position, (int)position);
     }
 
-    int word_number = 0;
-    string pattern;
-    while (cin >> pattern) {
-        ++word_number;
-        vector<int> entrances = suffix_tree_root.Find(pattern);
-        if (!entrances.empty()) {
-            sort(entrances.begin(), entrances.end());
-            cout << word_number << ": ";
-            for (size_t i = 0; i < entrances.size(); ++i) {
-                if (i > 0) {
-                    cout << ", ";
-                }
-                cout << entrances[i] + 1;
-            }
-            cout << "\n";
-        }
-    }
+    end = chrono::system_clock::now();
+    chrono::duration<double> elapsed_seconds = end - start;
+    cout << elapsed_seconds.count() << "\n";
+
+    // int word_number = 0;
+    // string pattern;
+    // while (cin >> pattern) {
+    //     ++word_number;
+    //     vector<int> entrances = suffix_tree_root.Find(pattern);
+    //     if (!entrances.empty()) {
+    //         sort(entrances.begin(), entrances.end());
+    //         cout << word_number << ": ";
+    //         for (size_t i = 0; i < entrances.size(); ++i) {
+    //             if (i > 0) {
+    //                 cout << ", ";
+    //             }
+    //             cout << entrances[i] + 1;
+    //         }
+    //         cout << "\n";
+    //     }
+    // }
+
     return 0;
 }
