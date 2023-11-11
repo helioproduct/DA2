@@ -1,6 +1,0 @@
-cdaaabdabcbabcbddbaddacbbbcccabcccabccacaacaacbdbdccdb
-bcccabcccabcca
-bdbbddcc
-dba
-aa
-bcacb

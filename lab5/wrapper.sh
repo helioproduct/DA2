@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source=main.cpp
+source=./src/main.cpp
 bin=${source%.*}
 
 if ! g++ -std=c++11 ${source} -o ${bin}; then
@@ -7,11 +7,6 @@ if ! g++ -std=c++11 ${source} -o ${bin}; then
     exit 1
 fi
 
-mkdir -p tests
-if ! python3 test_generator.py 10 ; then
-    echo "ERROR: Failed to python generate tests."
-    exit 1
-fi
 
 for test_file in `ls tests/*.t`; do
     echo "Execute ${test_file}"

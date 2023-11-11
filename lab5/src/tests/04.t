@@ -1,3 +1,0 @@
-ddcdcacbdcbcbd
-aba
-abddbbcc
