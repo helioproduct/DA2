@@ -1,0 +1,17 @@
+bcddddbcdbccaadccacabadad
+acdabbdcbc
+acab
+ccaca
+c
+cadbcd
+bacacbb
+dbccaadccaca
+caba
+c
+ddcdbaccc
+bcdbccaa
+cbddda
+cdbccaadccaca
+bdabcab
+aaaaa
+acdcd

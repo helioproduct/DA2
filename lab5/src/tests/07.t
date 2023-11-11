@@ -1,0 +1,10 @@
+adacbadcabddddcbcdbdbcdccccadaacbcccabcdadadcbdbadcbabbdbbdcbdabbdcaddcabccbcdadb
+ddcbcdbdbcdccccadaacbcccabcdadadcbdbadcbabbdbbdcbdabbdcaddca
+bcbbbbabbd
+daab
+ba
+bcdbd
+dbcdccccadaacbccc
+bdca
+bbddcc
+cadaacbcccabcdadadcbdbadcba
