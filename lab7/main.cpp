@@ -10,7 +10,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         std::cin >> row;
         for (int j = 0; j < row.size(); j++) {
-            data[i][j] = row[j] - '0';
+            // data[i][j] = row[j] - '0';
         }
     }
 
