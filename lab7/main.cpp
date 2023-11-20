@@ -19,6 +19,14 @@ int maxRectangleArea(vector<vector<int> >& matrix) {
         }
     }
 
+    cout << endl;
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            cout << height[i][j];
+        }
+        cout << endl;
+    }
+
     // Поиск максимальной площади прямоугольника в каждой строке
     for (int i = 0; i < n; ++i) {
         stack<int> indices;
@@ -52,7 +60,6 @@ int main() {
     cin >> n >> m;
     vector<vector<int> > matrix(n, vector<int>(m));
 
-    // Считывание матрицы
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
             char ch;
