@@ -10,7 +10,6 @@ int maxRectangleArea(vector<vector<int> >& matrix) {
     vector<vector<int> > height(n, vector<int>(m, 0));
     int maxArea = 0;
 
-    // Построение матрицы высот
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
             if (matrix[i][j] == 0) {
@@ -19,15 +18,6 @@ int maxRectangleArea(vector<vector<int> >& matrix) {
         }
     }
 
-    cout << endl;
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j) {
-            cout << height[i][j];
-        }
-        cout << endl;
-    }
-
-    // Поиск максимальной площади прямоугольника в каждой строке
     for (int i = 0; i < n; ++i) {
         stack<int> indices;
         int j = 0;
@@ -39,6 +29,7 @@ int maxRectangleArea(vector<vector<int> >& matrix) {
                 indices.pop();
                 int area = height[i][tp] *
                            (indices.empty() ? j : j - indices.top() - 1);
+
                 maxArea = max(maxArea, area);
             }
         }
